@@ -18,6 +18,8 @@
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "paths": {
       "smooth-scrollbar": [ "src/index" ],
       "smooth-scrollbar/*": [ "src/*" ]
