@@ -21,6 +21,11 @@ module.exports = merge(baseConfig, {
     rules: [{
       test: /\.ts$/,
       enforce: 'pre',
+      // exclude from tslint is not working in webpack
+      exclude: [
+        path.resolve(__dirname, '../playwright.config.ts'),
+        path.resolve(__dirname, '../node_modules')
+      ],
       use: [{
         loader: 'tslint-loader',
         options: {

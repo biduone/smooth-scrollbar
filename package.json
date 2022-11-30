@@ -27,8 +27,10 @@
     "postghpages": "cpx 'demo/{images/*,index.html}' ghpages -v",
     "deploy": "./scripts/deploy.sh",
     "test": "npm run lint && tsc --noEmit",
-    "preview": "vite",
-    "test:e2e": "playwright test",
+    "preview:dev": "vite dev",
+    "preview:build": "vite build",
+    "preview": "vite preview --port 5173",
+    "test:e2e": "playwright test --debug",
     "release": "node ./scripts/release.js"
   },
   "repository": {
@@ -59,6 +61,7 @@
     "dat-gui": "^0.5.0",
     "execa": "^0.8.0",
     "inquirer": "^6.5.2",
+    "jsdom": "^20.0.3",
     "listr": "^0.12.0",
     "npm-run-all": "^4.1.5",
     "playwright": "^1.28.0",

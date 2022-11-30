@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    
+    <div id="app">
+      
+      <section id="section-1" class="flex-center flex-col" style="background-color: #00B0FF">
+        <h1>Section 1</h1>
+
+        <div>
+          <button id="scrollToSection5" type="button">scroll to 4</button>
+        </div>
+      </section>
+
+      <section id="section-2" class="flex-center" style="background-color: #4DB6AC">
+        <h1>Section 2</h1>
+      </section>
+
+      <section id="section-3" class="flex-center" style="background-color: #81C784">
+        <h1>Section 3</h1>
+      </section>
+
+      <section id="section-4" class="flex-center flex-col" style="background-color: #E6EE9C">
+        <h1>Section 4</h1>
+
+        <div>
+          <button id="scrollToSection1">scroll to 1</button>
+        </div>
+      </section>
+    </div>
+    <div class="scroll-progress"></div>
+    <div id="scrollStatus" class="scroll-status">0</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

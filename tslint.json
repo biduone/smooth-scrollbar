@@ -9,5 +9,11 @@
     "no-unused-variable": false,
     "strict-type-predicates": false,
     "space-before-function-paren": [true, {"anonymous": "always", "named": "never", "asyncArrow": "always"}]
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "playwright.config.ts"
+    ]
   }
 }

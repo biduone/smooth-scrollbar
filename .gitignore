@@ -33,3 +33,7 @@ bower_components
 # build file
 .tmp
 build
+
+# playwright
+test-results/
+playwright-report/
