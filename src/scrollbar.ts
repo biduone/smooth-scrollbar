@@ -140,12 +140,12 @@ export class Scrollbar implements I.Scrollbar {
     options?: Partial<I.ScrollbarOptions>,
   ) {
     this.containerEl = containerEl;
-    const contentEl = this.contentEl = document.createElement('div');
-
-    this.options = new Options(options);
-
     // mark as a scroll element
     containerEl.setAttribute('data-scrollbar', 'true');
+    const existContentEl = containerEl.querySelector("[data-scrollbar]>.scroll-content") as HTMLElement;
+    const contentEl = this.contentEl = existContentEl || document.createElement('div');
+
+    this.options = new Options(options);
 
     // make container focusable
     containerEl.setAttribute('tabindex', '-1');
@@ -162,13 +162,13 @@ export class Scrollbar implements I.Scrollbar {
 
     // mount content
     contentEl.className = 'scroll-content';
+    if (!existContentEl) {
+      Array.from(containerEl.childNodes).forEach((node) => {
+        contentEl.appendChild(node);
+      });
 
-    Array.from(containerEl.childNodes).forEach((node) => {
-      contentEl.appendChild(node);
-    });
-
-    containerEl.appendChild(contentEl);
-
+      containerEl.appendChild(contentEl);
+    }
     // attach track
     this.track = new TrackController(this);
 

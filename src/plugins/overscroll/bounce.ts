@@ -1,11 +1,11 @@
-import Scrollbar from 'smooth-scrollbar';
+import Scrollbar from '../../index';
 
 import { setStyle } from '../../utils/set-style';
 
 export class Bounce {
   constructor(
     private _scrollbar: Scrollbar,
-  ) {}
+  ) { }
 
   render({ x = 0, y = 0 }) {
     const {

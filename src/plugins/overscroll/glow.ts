@@ -1,5 +1,5 @@
 import clamp from 'lodash.clamp';
-import Scrollbar from 'smooth-scrollbar';
+import Scrollbar from '../../index';
 
 import { setStyle } from '../../utils/set-style';
 
